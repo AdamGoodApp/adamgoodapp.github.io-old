@@ -96,14 +96,21 @@ $(document).ready(function() {
   	$('.github-repo').attr('data-to', data["public_repos"]);
 	});
 
-	// Total Commits
+	// Treehouse
 	$.ajax({
-  	url: "https://api.github.com/users/adamgoodapp/repos?per_page\=100"
+  	url: "http://teamtreehouse.com/adamrais.json"
 	}).done(function(data) {
-  	  $(data).each(function(index) {
-        console.log(this["language"]);
-      })
+  	 $('.treehouse-lessons').attr('data-to', data["badges"].length);
 	});
+
+	// Steam
+	$.ajax({
+  	url: "http://adamgoodapp.herokuapp.com/steam.json"
+	}).done(function(data) {
+  	 $('#steam-game').html("Last played: " + data.game);
+	});
+
+	
 
 });
 
