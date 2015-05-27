@@ -86,6 +86,25 @@ $(document).ready(function() {
 		
 		$('.macbook-inner').waypoint(function(){$(this).toggleClass('active');$(this).toggleClass('black');},{offset:'70%'});
 	}
+
+	// GITHUB
+
+	// Total repos
+	$.ajax({
+  	url: "https://api.github.com/users/adamgoodapp"
+	}).done(function(data) {
+  	$('.github-repo').attr('data-to', data["public_repos"]);
+	});
+
+	// Total Commits
+	$.ajax({
+  	url: "https://api.github.com/users/adamgoodapp/repos?per_page\=100"
+	}).done(function(data) {
+  	  $(data).each(function(index) {
+        console.log(this["language"]);
+      })
+	});
+
 });
 
 
