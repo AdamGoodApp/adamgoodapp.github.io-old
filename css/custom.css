@@ -1478,7 +1478,16 @@ blockquote footer {
 
 .profile-image {
 	border-radius: 100%;
-  border: 11px solid white;
+}
+
+.header-image {}
+
+.landing-image {
+	border: 11px solid white;
+}
+
+.about-image {
+	border: 6px solid white;
 }
 
 
