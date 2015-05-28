@@ -462,7 +462,6 @@ header {
 .service > p {
 	line-height:22px;
 	text-align:justify;
-
 }
 
 #services {
@@ -939,6 +938,7 @@ blockquote footer {
 
 #contact {
 	color:#333333;
+	background-color: #1ABC9C;
 	text-align:center;
 }
 
