@@ -110,6 +110,13 @@ $(document).ready(function() {
   	 $('#steam-game').html("Last played: " + data.game);
 	});
 
+	// Facebook
+	$.ajax({
+  	url: "http://adamgoodapp.herokuapp.com/facebook.json"
+	}).done(function(data) {
+		$('.facebook-photos').attr('data-to', data.photos);
+	});
+
 	
 
 });
